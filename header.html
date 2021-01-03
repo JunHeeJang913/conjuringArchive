@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8"/>
+        <title>Header</title>
+        <style>
+            body{
+                background-color: rgba(181,214,146);
+            }
+            #webName{
+                color:rgb(34, 61, 4);
+                text-decoration:none;
+                font-size: 40px;
+                font-weight: bolder;
+                text-shadow: 1px 1px 2px greenyellow;
+            }
+            .menuButton{
+                float:right;
+                border-color:antiquewhite;
+                background-color: lemonchiffon;
+                width:60px;
+                height: 50px;
+                border-width: 1px;
+                border-radius:5px;
+                font-size:30px; 
+                box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+            }
+            .menuList{
+                float:right;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div style = "display: block;">
+                <a href="" id = "webName">Conjuring Archive</a>
+                <button class="menuButton">♠</button>
+            </div>
+            <div class = "menuList">
+                <input type = "text" value="Search.." name = "query"/>
+                <ul>
+                    <li><a href="">Advanced Search</a></li>
+                    <li><a href="">Books</a></li>
+                    <li><a href="">Categories</a></li>
+                    <li><a href="">F&Q</a></li>
+                </ul>
+            </div>
+            <script>
+                const btn = document.getElementsByClassName("menuButton");
+                console.log(btn);
+                function btnEventHandler(){
+                    alert("YOU click the button")
+                    let listCondition = document.getElementsByClassName("menuList");
+                    if(listCondition.style.display===none){
+                        listCondition.style.display===block;
+                    }else{
+                        listCondition.style.display===none;
+                    }
+                }
+                //btn.addEventListener("click",btnEventHandler)
+            </script>
+        </header>
+    </body>
+</html>
